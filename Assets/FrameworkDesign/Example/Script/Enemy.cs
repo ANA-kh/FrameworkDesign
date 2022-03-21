@@ -15,7 +15,7 @@ namespace FrameworkDesign.Example
 
             if (mKilledEnemyCount == 4)
             {
-                GamePassPanel.SetActive(true);
+                GameEndEvent.Trigger();
             }
         }
     }
