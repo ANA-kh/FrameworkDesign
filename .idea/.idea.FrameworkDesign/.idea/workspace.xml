@@ -25,18 +25,14 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38a3e848-3c8f-485c-8d84-9308e5eb0f13" name="Default Changelist" comment="eventRegister">
-      <change afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Framework.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Framework/Event.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Framework/Event/Event.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Framework/Event/Event.cs.meta" afterDir="false" />
+    <list default="true" id="38a3e848-3c8f-485c-8d84-9308e5eb0f13" name="Default Changelist" comment="添加 model">
+      <change afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Event/KilledOneEnemyEvent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Event/KilledOneEnemyEvent.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FrameworkDesign/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FrameworkDesign/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FrameworkDesign/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FrameworkDesign/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Event/GameEndEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Event/GamePassEvent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Event/GameEndEvent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Event/GamePassEvent.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Event/GameStartEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Event/GameStartEvent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Game/UI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Game/UI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Game/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Game/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Game/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Game/Game.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Model/GameModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Model/GameModel.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +41,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="WARN_ABOUT_CRLF" value="false" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Event/GameStartEvent.cs" root0="FORCE_HIGHLIGHTING" />
@@ -54,13 +51,16 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/UI/GameStartPanel.cs" />
-        <option value="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Game/Game.cs" />
         <option value="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Game/UI.cs" />
         <option value="$PROJECT_DIR$/Assets/FrameworkDesign/Framework/Event/Event.cs" />
         <option value="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Event/GameEndEvent.cs" />
         <option value="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Event/GamePassEvent.cs" />
         <option value="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Event/GameStartEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Model/GameModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Event/KilledOneEnemyEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Game/Enemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Game/Game.cs" />
       </list>
     </option>
   </component>
@@ -78,7 +78,7 @@
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
@@ -110,7 +110,7 @@
       <updated>1646986593192</updated>
       <workItem from="1646986601402" duration="2684000" />
       <workItem from="1647844533714" duration="6539000" />
-      <workItem from="1647932826523" duration="907000" />
+      <workItem from="1647932826523" duration="5302000" />
     </task>
     <task id="LOCAL-00001" summary="eventRegister">
       <created>1647859661390</created>
@@ -126,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647860892917</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="添加 model">
+      <created>1647934065838</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1647934065838</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,7 +168,8 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="eventRegister" />
-    <option name="LAST_COMMIT_MESSAGE" value="eventRegister" />
+    <MESSAGE value="添加 model" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加 model" />
   </component>
   <component name="WindowStateProjectService">
     <state x="536" y="185" key="#Inspection_severity" timestamp="1647933501174">
@@ -248,10 +256,10 @@
     </state>
     <state width="914" height="361" key="GridCell.Tab.3.right/-1920.0.1920.1080/0.0.1920.1080@-1920.0.1920.1080" timestamp="1647860757749" />
     <state width="1877" height="361" key="GridCell.Tab.3.right/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1647860973618" />
-    <state x="461" y="184" key="SettingsEditor" timestamp="1647858540070">
+    <state x="452" y="104" key="SettingsEditor" timestamp="1647937232288">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="461" y="184" key="SettingsEditor/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1647858540070" />
+    <state x="452" y="104" key="SettingsEditor/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1647937232288" />
     <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1647860895137">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -261,7 +269,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Game/UI.cs</url>
+          <url>file://$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/UI/UI.cs</url>
           <line>14</line>
           <properties documentPath="D:\unityProject\FrameworkDesign\Assets\FrameworkDesign\Example\Script\Game\UI.cs" initialLine="14">
             <startOffsets>

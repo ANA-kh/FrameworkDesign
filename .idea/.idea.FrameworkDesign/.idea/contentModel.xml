@@ -12,6 +12,7 @@
               <e p="Event" t="Include">
                 <e p="GamePassEvent.cs" t="Include" />
                 <e p="GameStartEvent.cs" t="Include" />
+                <e p="KilledOneEnemyEvent.cs" t="Include" />
               </e>
               <e p="Game" t="Include">
                 <e p="Enemy.cs" t="Include" />
