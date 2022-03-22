@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
-namespace FrameworkDesign.Example
+namespace FrameworkDesign
 {
-    public static class GameEndEvent
+    public class Event<T> where T : Event<T>
     {
         private static Action mOnEvent;
 

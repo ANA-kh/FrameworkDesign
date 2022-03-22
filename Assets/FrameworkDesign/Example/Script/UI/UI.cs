@@ -7,7 +7,7 @@ namespace FrameworkDesign.Example
     {
         private void Awake()
         {
-            GameEndEvent.Register(OnGameEnd);
+            GamePassEvent.Register(OnGameEnd);
         }
 
         private void OnGameEnd()
@@ -17,7 +17,7 @@ namespace FrameworkDesign.Example
 
         private void OnDestroy()
         {
-            GameEndEvent.UnRegister(OnGameEnd);
+            GamePassEvent.UnRegister(OnGameEnd);
         }
     }
 }

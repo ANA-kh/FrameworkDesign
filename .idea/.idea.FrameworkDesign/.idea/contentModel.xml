@@ -9,18 +9,26 @@
         <e p="FrameworkDesign" t="Include">
           <e p="Example" t="Include">
             <e p="Script" t="Include">
-              <e p="Enemy.cs" t="Include" />
               <e p="Event" t="Include">
-                <e p="GameEndEvent.cs" t="Include" />
+                <e p="GamePassEvent.cs" t="Include" />
                 <e p="GameStartEvent.cs" t="Include" />
               </e>
               <e p="Game" t="Include">
+                <e p="Enemy.cs" t="Include" />
                 <e p="Game.cs" t="Include" />
-                <e p="UI.cs" t="Include" />
+              </e>
+              <e p="Model" t="Include">
+                <e p="GameModel.cs" t="Include" />
               </e>
               <e p="UI" t="Include">
                 <e p="GameStartPanel.cs" t="Include" />
+                <e p="UI.cs" t="Include" />
               </e>
+            </e>
+          </e>
+          <e p="Framework" t="Include">
+            <e p="Event" t="Include">
+              <e p="Event.cs" t="Include" />
             </e>
           </e>
         </e>

@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace FrameworkDesign.Example
 {
-    public class GameStartEvent : Event<GameStartEvent>
+    public class GamePassEvent : Event<GamePassEvent>
     {
         
     }
