@@ -25,14 +25,13 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38a3e848-3c8f-485c-8d84-9308e5eb0f13" name="Default Changelist" comment="添加 model">
-      <change afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/CounterApp.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/CounterApp.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Script.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Script/CounterViewController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Script/CounterViewController.cs.meta" afterDir="false" />
+    <list default="true" id="38a3e848-3c8f-485c-8d84-9308e5eb0f13" name="Default Changelist" comment="model-view">
+      <change afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Framework/BindableProperty.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Framework/BindableProperty/BindableProperty.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Framework/BindableProperty/BindableProperty.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FrameworkDesign/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FrameworkDesign/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FrameworkDesign/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FrameworkDesign/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Script/CounterViewController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Script/CounterViewController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +63,7 @@
         <option value="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Event/KilledOneEnemyEvent.cs" />
         <option value="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Game/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Game/Game.cs" />
+        <option value="$PROJECT_DIR$/Assets/FrameworkDesign/Framework/BindableProperty/BindableProperty.cs" />
         <option value="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Script/CounterViewController.cs" />
       </list>
     </option>
@@ -115,7 +115,7 @@
       <updated>1646986593192</updated>
       <workItem from="1646986601402" duration="2684000" />
       <workItem from="1647844533714" duration="6539000" />
-      <workItem from="1647932826523" duration="6945000" />
+      <workItem from="1647932826523" duration="9405000" />
     </task>
     <task id="LOCAL-00001" summary="eventRegister">
       <created>1647859661390</created>
@@ -145,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647938747562</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="添加 model">
+      <created>1647940703929</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1647940703929</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,14 +188,18 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="eventRegister" />
-    <MESSAGE value="添加 model" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加 model" />
+    <MESSAGE value="model-view" />
+    <option name="LAST_COMMIT_MESSAGE" value="model-view" />
   </component>
   <component name="WindowStateProjectService">
     <state x="536" y="185" key="#Inspection_severity" timestamp="1647933501174">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="536" y="185" key="#Inspection_severity/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1647933501174" />
+    <state x="815" y="438" key="Git.Rebase.Log.Action.NewCommitMessage.Dialog" timestamp="1647940777802">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="815" y="438" key="Git.Rebase.Log.Action.NewCommitMessage.Dialog/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1647940777802" />
     <state width="1877" height="361" key="GridCell.Tab.0.bottom" timestamp="1647860973618">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

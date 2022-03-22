@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using FrameworkDesign;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,25 +10,24 @@ public class CounterViewController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CounterModel.OnCountChanged += OnCountChanged;
-        
-        OnCountChanged(CounterModel.Count);
+        CounterModel.Count.OnValueChanged += OnCountChanged;
+        OnCountChanged(CounterModel.Count.Value);
         
         transform.Find("BtnAdd").GetComponent<Button>().onClick.AddListener(() =>
         {
-            CounterModel.Count++;
+            CounterModel.Count.Value++;
         });
         
         transform.Find("BtnSub").GetComponent<Button>().onClick.AddListener(() =>
         {
-            CounterModel.Count--;
+            CounterModel.Count.Value--;
         });
     }
     
 
     private void OnDestroy()
     {
-        CounterModel.OnCountChanged -= OnCountChanged;
+        CounterModel.Count.OnValueChanged -= OnCountChanged;
     }
 
     private void OnCountChanged(int newCount)
@@ -36,21 +36,15 @@ public class CounterViewController : MonoBehaviour
     }
 }
 
+public class OnCountChangedEvent : Event<OnCountChangedEvent>
+{
+    
+}
+
 public static class CounterModel
 {
-    private static int count;
-
-    public static Action<int> OnCountChanged;
-    public static int Count
+    public static BindableProperty<int> Count = new BindableProperty<int>()
     {
-        get => count;
-        set
-        {
-            if (value != count)
-            {
-                count = value;
-                OnCountChanged?.Invoke(value);
-            }
-        }
-    }
+        Value = 0
+    };
 }
