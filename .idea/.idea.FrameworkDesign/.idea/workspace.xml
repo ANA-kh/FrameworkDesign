@@ -26,13 +26,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38a3e848-3c8f-485c-8d84-9308e5eb0f13" name="Default Changelist" comment="添加 model">
-      <change afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Event/KilledOneEnemyEvent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Event/KilledOneEnemyEvent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/CounterApp.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/CounterApp.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Script.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Script/CounterViewController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Script/CounterViewController.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FrameworkDesign/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FrameworkDesign/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FrameworkDesign/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FrameworkDesign/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Game/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Game/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Game/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Game/Game.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Model/GameModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Model/GameModel.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +45,9 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Event/GameStartEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/unityProject/FrameworkDesign/Assets/FrameworkDesign/Example/Script/Event/KilledOneEnemyEvent.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/unityProject/FrameworkDesign/Assets/FrameworkDesign/Example/Script/Event/KilledOneEnemyEvent.cs.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Script/CounterViewController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/UI/GameStartPanel.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -61,6 +64,7 @@
         <option value="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Event/KilledOneEnemyEvent.cs" />
         <option value="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Game/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Game/Game.cs" />
+        <option value="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Script/CounterViewController.cs" />
       </list>
     </option>
   </component>
@@ -73,6 +77,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34994337" />
     <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30011326" />
     <property name="Discover.Launch.Via.Unity" value="true" />
@@ -110,7 +115,7 @@
       <updated>1646986593192</updated>
       <workItem from="1646986601402" duration="2684000" />
       <workItem from="1647844533714" duration="6539000" />
-      <workItem from="1647932826523" duration="5302000" />
+      <workItem from="1647932826523" duration="6945000" />
     </task>
     <task id="LOCAL-00001" summary="eventRegister">
       <created>1647859661390</created>
@@ -133,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647934065838</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="添加 model">
+      <created>1647938747562</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1647938747562</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,6 +178,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="eventRegister" />
     <MESSAGE value="添加 model" />
@@ -260,10 +273,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="452" y="104" key="SettingsEditor/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1647937232288" />
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1647860895137">
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1647938915291">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1647860895137" />
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1647938915291" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
