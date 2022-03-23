@@ -25,13 +25,23 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38a3e848-3c8f-485c-8d84-9308e5eb0f13" name="Default Changelist" comment="model-view">
-      <change afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Framework/BindableProperty.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Framework/BindableProperty/BindableProperty.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Framework/BindableProperty/BindableProperty.cs.meta" afterDir="false" />
+    <list default="true" id="38a3e848-3c8f-485c-8d84-9308e5eb0f13" name="Default Changelist" comment="添加 BindableProperty">
+      <change afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Script/AddCountCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Script/AddCountCommand.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Script/SubCountCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Script/SubCountCommand.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Framework/Command.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Framework/Command/ICommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Framework/Command/ICommand.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FrameworkDesign/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FrameworkDesign/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FrameworkDesign/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FrameworkDesign/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/CounterApp.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/CounterApp.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Script/CounterViewController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Script/CounterViewController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Event/KilledOneEnemyEvent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Event/KilledOneEnemyEvent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Game/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Game/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Game/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Game/Game.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Model/GameModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Model/GameModel.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,11 +69,14 @@
         <option value="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Event/GameEndEvent.cs" />
         <option value="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Event/GamePassEvent.cs" />
         <option value="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Event/GameStartEvent.cs" />
-        <option value="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Model/GameModel.cs" />
         <option value="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Event/KilledOneEnemyEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/FrameworkDesign/Framework/BindableProperty/BindableProperty.cs" />
+        <option value="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Model/GameModel.cs" />
         <option value="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Game/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Game/Game.cs" />
-        <option value="$PROJECT_DIR$/Assets/FrameworkDesign/Framework/BindableProperty/BindableProperty.cs" />
+        <option value="$PROJECT_DIR$/Assets/FrameworkDesign/Framework/Command/ICommand.cs" />
+        <option value="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Script/SubCountCommand.cs" />
+        <option value="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Script/AddCountCommand.cs" />
         <option value="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Script/CounterViewController.cs" />
       </list>
     </option>
@@ -115,7 +128,7 @@
       <updated>1646986593192</updated>
       <workItem from="1646986601402" duration="2684000" />
       <workItem from="1647844533714" duration="6539000" />
-      <workItem from="1647932826523" duration="9405000" />
+      <workItem from="1647932826523" duration="12747000" />
     </task>
     <task id="LOCAL-00001" summary="eventRegister">
       <created>1647859661390</created>
@@ -152,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647940703929</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="添加 BindableProperty">
+      <created>1647942913080</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1647942913080</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,7 +209,8 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="eventRegister" />
     <MESSAGE value="model-view" />
-    <option name="LAST_COMMIT_MESSAGE" value="model-view" />
+    <MESSAGE value="添加 BindableProperty" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加 BindableProperty" />
   </component>
   <component name="WindowStateProjectService">
     <state x="536" y="185" key="#Inspection_severity" timestamp="1647933501174">

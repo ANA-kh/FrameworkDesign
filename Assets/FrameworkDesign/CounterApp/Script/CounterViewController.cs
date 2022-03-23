@@ -1,50 +1,50 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using FrameworkDesign;
+﻿using FrameworkDesign;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CounterViewController : MonoBehaviour
+namespace CounterApp
 {
-    // Start is called before the first frame update
-    void Start()
+    public class CounterViewController : MonoBehaviour
     {
-        CounterModel.Count.OnValueChanged += OnCountChanged;
-        OnCountChanged(CounterModel.Count.Value);
-        
-        transform.Find("BtnAdd").GetComponent<Button>().onClick.AddListener(() =>
+        // Start is called before the first frame update
+        void Start()
         {
-            CounterModel.Count.Value++;
-        });
-        
-        transform.Find("BtnSub").GetComponent<Button>().onClick.AddListener(() =>
+            CounterModel.Count.OnValueChanged += OnCountChanged;
+            OnCountChanged(CounterModel.Count.Value);
+
+            transform.Find("BtnAdd").GetComponent<Button>().onClick.AddListener(() =>
+            {
+                new AddCountCommand().Execute();
+            });
+
+            transform.Find("BtnSub").GetComponent<Button>().onClick.AddListener(() =>
+            {
+                new SubCountCommand().Execute();
+            });
+        }
+
+
+        private void OnDestroy()
         {
-            CounterModel.Count.Value--;
-        });
+            CounterModel.Count.OnValueChanged -= OnCountChanged;
+        }
+
+        private void OnCountChanged(int newCount)
+        {
+            transform.Find("CountText").GetComponent<Text>().text = newCount.ToString();
+        }
     }
-    
 
-    private void OnDestroy()
+    public class OnCountChangedEvent : Event<OnCountChangedEvent>
     {
-        CounterModel.Count.OnValueChanged -= OnCountChanged;
+
     }
 
-    private void OnCountChanged(int newCount)
+    public static class CounterModel
     {
-        transform.Find("CountText").GetComponent<Text>().text = newCount.ToString();
+        public static BindableProperty<int> Count = new BindableProperty<int>()
+        {
+            Value = 0
+        };
     }
-}
-
-public class OnCountChangedEvent : Event<OnCountChangedEvent>
-{
-    
-}
-
-public static class CounterModel
-{
-    public static BindableProperty<int> Count = new BindableProperty<int>()
-    {
-        Value = 0
-    };
 }
