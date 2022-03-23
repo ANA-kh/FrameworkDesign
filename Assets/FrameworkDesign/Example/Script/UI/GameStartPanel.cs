@@ -12,7 +12,7 @@ namespace FrameworkDesign.Example
             transform.Find("BtnStart").GetComponent<Button>().onClick.AddListener(() =>
             {
                 gameObject.SetActive(false);
-                GameStartEvent.Trigger();
+                new StartGameCommand().Execute();
             });
         }
 

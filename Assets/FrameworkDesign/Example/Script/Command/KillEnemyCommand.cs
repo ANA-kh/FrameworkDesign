@@ -5,6 +5,11 @@
         public void Execute()
         {
             GameModel.KillCount.Value++;
+
+            if (GameModel.KillCount.Value == 4)
+            {
+                GamePassEvent.Trigger();
+            }
         }
     }
 }
