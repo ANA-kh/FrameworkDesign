@@ -26,10 +26,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38a3e848-3c8f-485c-8d84-9308e5eb0f13" name="Default Changelist" comment="Add Command">
+      <change afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Framework/Singleton.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Framework/Singleton/Singleton.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Framework/Singleton/Singleton.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FrameworkDesign/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FrameworkDesign/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FrameworkDesign/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FrameworkDesign/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Command/KillEnemyCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Command/KillEnemyCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Game/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Game/Game.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/UI/GameStartPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/UI/GameStartPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Editor/EditorCounterApp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Editor/EditorCounterApp.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Script/AddCountCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Script/AddCountCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Script/CounterViewController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Script/CounterViewController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Script/SubCountCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Script/SubCountCommand.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,16 +63,17 @@
         <option value="$PROJECT_DIR$/Assets/FrameworkDesign/Framework/BindableProperty/BindableProperty.cs" />
         <option value="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Model/GameModel.cs" />
         <option value="$PROJECT_DIR$/Assets/FrameworkDesign/Framework/Command/ICommand.cs" />
-        <option value="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Script/SubCountCommand.cs" />
-        <option value="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Script/AddCountCommand.cs" />
-        <option value="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Script/CounterViewController.cs" />
-        <option value="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Editor/EditorCounterApp.cs" />
         <option value="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Game/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Command/StartGameCommand.cs" />
         <option value="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Command/PassGameCommand.cs" />
         <option value="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/UI/GameStartPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Game/Game.cs" />
         <option value="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Command/KillEnemyCommand.cs" />
+        <option value="$PROJECT_DIR$/Assets/FrameworkDesign/Framework/Singleton/Singleton.cs" />
+        <option value="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Editor/EditorCounterApp.cs" />
+        <option value="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Script/AddCountCommand.cs" />
+        <option value="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Script/CounterViewController.cs" />
+        <option value="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Script/SubCountCommand.cs" />
       </list>
     </option>
   </component>
@@ -119,7 +125,8 @@
       <workItem from="1646986601402" duration="2684000" />
       <workItem from="1647844533714" duration="6539000" />
       <workItem from="1647932826523" duration="12747000" />
-      <workItem from="1648019663991" duration="3943000" />
+      <workItem from="1648019663991" duration="5628000" />
+      <workItem from="1648102755770" duration="4642000" />
     </task>
     <task id="LOCAL-00001" summary="eventRegister">
       <created>1647859661390</created>
@@ -177,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648029500938</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Add Command">
+      <created>1648030316618</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1648030316618</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
