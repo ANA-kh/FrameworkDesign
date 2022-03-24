@@ -19,27 +19,32 @@
             </e>
           </e>
           <e p="Example" t="Include">
-            <e p="Script" t="Include">
-              <e p="Command" t="Include">
-                <e p="KillEnemyCommand.cs" t="Include" />
-                <e p="PassGameCommand.cs" t="Include" />
-                <e p="StartGameCommand.cs" t="Include" />
+            <e p="Game" t="Include">
+              <e p="Script" t="Include">
+                <e p="Command" t="Include">
+                  <e p="KillEnemyCommand.cs" t="Include" />
+                  <e p="PassGameCommand.cs" t="Include" />
+                  <e p="StartGameCommand.cs" t="Include" />
+                </e>
+                <e p="Event" t="Include">
+                  <e p="GamePassEvent.cs" t="Include" />
+                  <e p="GameStartEvent.cs" t="Include" />
+                </e>
+                <e p="Game" t="Include">
+                  <e p="Enemy.cs" t="Include" />
+                  <e p="Game.cs" t="Include" />
+                </e>
+                <e p="Model" t="Include">
+                  <e p="GameModel.cs" t="Include" />
+                </e>
+                <e p="UI" t="Include">
+                  <e p="GameStartPanel.cs" t="Include" />
+                  <e p="UI.cs" t="Include" />
+                </e>
               </e>
-              <e p="Event" t="Include">
-                <e p="GamePassEvent.cs" t="Include" />
-                <e p="GameStartEvent.cs" t="Include" />
-              </e>
-              <e p="Game" t="Include">
-                <e p="Enemy.cs" t="Include" />
-                <e p="Game.cs" t="Include" />
-              </e>
-              <e p="Model" t="Include">
-                <e p="GameModel.cs" t="Include" />
-              </e>
-              <e p="UI" t="Include">
-                <e p="GameStartPanel.cs" t="Include" />
-                <e p="UI.cs" t="Include" />
-              </e>
+            </e>
+            <e p="IOCExample" t="Include">
+              <e p="IOCExample.cs" t="Include" />
             </e>
           </e>
           <e p="Framework" t="Include">
@@ -51,6 +56,9 @@
             </e>
             <e p="Event" t="Include">
               <e p="Event.cs" t="Include" />
+            </e>
+            <e p="IOC" t="Include">
+              <e p="IOCContainer.cs" t="Include" />
             </e>
             <e p="Singleton" t="Include">
               <e p="Singleton.cs" t="Include" />
