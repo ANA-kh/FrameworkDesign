@@ -14,6 +14,7 @@
             </e>
             <e p="Script" t="Include">
               <e p="AddCountCommand.cs" t="Include" />
+              <e p="CounterApp.cs" t="Include" />
               <e p="CounterViewController.cs" t="Include" />
               <e p="SubCountCommand.cs" t="Include" />
             </e>
@@ -37,6 +38,7 @@
                 <e p="Model" t="Include">
                   <e p="GameModel.cs" t="Include" />
                 </e>
+                <e p="PointGame.cs" t="Include" />
                 <e p="UI" t="Include">
                   <e p="GameStartPanel.cs" t="Include" />
                   <e p="UI.cs" t="Include" />
@@ -48,6 +50,9 @@
             </e>
           </e>
           <e p="Framework" t="Include">
+            <e p="Architecture" t="Include">
+              <e p="Architecture.cs" t="Include" />
+            </e>
             <e p="BindableProperty" t="Include">
               <e p="BindableProperty.cs" t="Include" />
             </e>

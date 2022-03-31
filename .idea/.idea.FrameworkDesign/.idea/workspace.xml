@@ -25,47 +25,23 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38a3e848-3c8f-485c-8d84-9308e5eb0f13" name="Default Changelist" comment="Example Add Singleton">
-      <change afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Game.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Game/Game.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/IOCExample.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/IOCExample/IOCExample.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/IOCExample/IOCExample.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/IOCExample/IOCExample.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/IOCExample/IOCExample.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Framework/IOC.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Framework/IOC/IOCContainer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Framework/IOC/IOCContainer.cs.meta" afterDir="false" />
+    <list default="true" id="38a3e848-3c8f-485c-8d84-9308e5eb0f13" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Script/CounterApp.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Script/CounterApp.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Game/Script/PointGame.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Game/Script/PointGame.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Framework/Architecture.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Framework/Architecture/Architecture.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Framework/Architecture/Architecture.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FrameworkDesign/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FrameworkDesign/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FrameworkDesign/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FrameworkDesign/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Game/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Game.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Game/Script.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Command.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Game/Script/Command.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Command/KillEnemyCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Game/Script/Command/KillEnemyCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Command/KillEnemyCommand.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Game/Script/Command/KillEnemyCommand.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Command/PassGameCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Game/Script/Command/PassGameCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Command/PassGameCommand.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Game/Script/Command/PassGameCommand.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Command/StartGameCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Game/Script/Command/StartGameCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Command/StartGameCommand.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Game/Script/Command/StartGameCommand.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Event.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Game/Script/Event.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Event/GamePassEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Game/Script/Event/GamePassEvent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Event/GamePassEvent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Game/Script/Event/GamePassEvent.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Event/GameStartEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Game/Script/Event/GameStartEvent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Event/GameStartEvent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Game/Script/Event/GameStartEvent.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Game.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Game/Script/Game.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Game/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Game/Script/Game/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Game/Enemy.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Game/Script/Game/Enemy.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Game/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Game/Script/Game/Game.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Game/Game.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Game/Script/Game/Game.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Model.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Game/Script/Model.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Model/GameModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Game/Script/Model/GameModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Model/GameModel.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Game/Script/Model/GameModel.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/UI.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Game/Script/UI.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/UI/GameStartPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Game/Script/UI/GameStartPanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/UI/GameStartPanel.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Game/Script/UI/GameStartPanel.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/UI/UI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Game/Script/UI/UI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/UI/UI.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Game/Script/UI/UI.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Editor/EditorCounterApp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Editor/EditorCounterApp.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Script/AddCountCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Script/AddCountCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Script/CounterViewController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Script/CounterViewController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Script/SubCountCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Script/SubCountCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Game/Script/Command/KillEnemyCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Game/Script/Command/KillEnemyCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Game/Script/Model/GameModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Game/Script/Model/GameModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/IOCExample/IOCExample.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FrameworkDesign/Example/IOCExample/IOCExample.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,14 +75,19 @@
         <option value="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/UI/GameStartPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Game/Game.cs" />
         <option value="$PROJECT_DIR$/Assets/FrameworkDesign/Framework/Singleton/Singleton.cs" />
-        <option value="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Editor/EditorCounterApp.cs" />
-        <option value="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Script/AddCountCommand.cs" />
-        <option value="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Script/CounterViewController.cs" />
-        <option value="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Script/SubCountCommand.cs" />
         <option value="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Model/GameModel.cs" />
         <option value="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Script/Command/KillEnemyCommand.cs" />
         <option value="$PROJECT_DIR$/Assets/FrameworkDesign/Framework/IOC/IOCContainer.cs" />
         <option value="$PROJECT_DIR$/Assets/FrameworkDesign/Example/IOCExample/IOCExample.cs" />
+        <option value="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Script/CounterApp.cs" />
+        <option value="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Script/CounterViewController.cs" />
+        <option value="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Script/AddCountCommand.cs" />
+        <option value="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Script/SubCountCommand.cs" />
+        <option value="$PROJECT_DIR$/Assets/FrameworkDesign/CounterApp/Editor/EditorCounterApp.cs" />
+        <option value="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Game/Script/PointGame.cs" />
+        <option value="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Game/Script/Model/GameModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/FrameworkDesign/Example/Game/Script/Command/KillEnemyCommand.cs" />
+        <option value="$PROJECT_DIR$/Assets/FrameworkDesign/Framework/Architecture/Architecture.cs" />
       </list>
     </option>
   </component>
@@ -125,7 +106,7 @@
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
@@ -159,7 +140,7 @@
       <workItem from="1647844533714" duration="6539000" />
       <workItem from="1647932826523" duration="12747000" />
       <workItem from="1648019663991" duration="5628000" />
-      <workItem from="1648102755770" duration="6440000" />
+      <workItem from="1648102755770" duration="12414000" />
     </task>
     <task id="LOCAL-00001" summary="eventRegister">
       <created>1647859661390</created>
@@ -238,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648111151931</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="simple IOC example">
+      <created>1648112651488</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1648112651488</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,7 +267,8 @@
     <MESSAGE value="Add Command" />
     <MESSAGE value="CounterApp Add Singleton" />
     <MESSAGE value="Example Add Singleton" />
-    <option name="LAST_COMMIT_MESSAGE" value="Example Add Singleton" />
+    <MESSAGE value="simple IOC example" />
+    <option name="LAST_COMMIT_MESSAGE" value="simple IOC example" />
   </component>
   <component name="WindowStateProjectService">
     <state x="536" y="185" key="#Inspection_severity" timestamp="1647933501174">
@@ -370,14 +359,18 @@
     </state>
     <state width="914" height="361" key="GridCell.Tab.3.right/-1920.0.1920.1080/0.0.1920.1080@-1920.0.1920.1080" timestamp="1647860757749" />
     <state width="1877" height="361" key="GridCell.Tab.3.right/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1647860973618" />
-    <state x="452" y="104" key="SettingsEditor" timestamp="1647937232288">
+    <state x="402" y="132" key="SettingsEditor" timestamp="1648115617722">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="452" y="104" key="SettingsEditor/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1647937232288" />
+    <state x="402" y="132" key="SettingsEditor/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1648115617722" />
     <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1648029542899">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="552" y="273" key="Vcs.Push.Dialog.v2/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1648029542899" />
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1648113422107">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1648113422107" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -6,11 +6,12 @@ namespace CounterApp
 {
     public class CounterViewController : MonoBehaviour
     {
-        // Start is called before the first frame update
+        private CounterModel _counterModel;
         void Start()
         {
-            CounterModel.Instance.Count.OnValueChanged += OnCountChanged;
-            OnCountChanged(CounterModel.Instance.Count.Value);
+            _counterModel = CounterApp.Get<CounterModel>();
+            _counterModel.Count.OnValueChanged += OnCountChanged;
+            OnCountChanged(_counterModel.Count.Value);
 
             transform.Find("BtnAdd").GetComponent<Button>().onClick.AddListener(() =>
             {
@@ -26,7 +27,8 @@ namespace CounterApp
 
         private void OnDestroy()
         {
-            CounterModel.Instance.Count.OnValueChanged -= OnCountChanged;
+            _counterModel.Count.OnValueChanged -= OnCountChanged;
+            _counterModel = null;
         }
 
         private void OnCountChanged(int newCount)
@@ -40,9 +42,8 @@ namespace CounterApp
 
     }
 
-    public class CounterModel : Singleton<CounterModel>
+    public class CounterModel
     {
-        private CounterModel(){}
         public BindableProperty<int> Count = new BindableProperty<int>()
         {
             Value = 0

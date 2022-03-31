@@ -1,6 +1,6 @@
 ﻿namespace FrameworkDesign.Example
 {
-    public class GameModel : Singleton<GameModel>
+    public class GameModel
     {
         public BindableProperty<int> KillCount = new BindableProperty<int>()
         {
