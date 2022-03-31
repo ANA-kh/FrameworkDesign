@@ -2,29 +2,11 @@
 
 namespace CounterApp
 {
-    public class CounterApp
+    public class CounterApp : Architecture<CounterApp>
     {
-        private static IOCContainer _container;
-
-        static void MakeSureContainer()
+        protected override void Init()
         {
-            if (_container == null)
-            {
-                _container = new IOCContainer();
-                Init();
-            }
+            Register(new CounterModel());
         }
-
-        private static void Init()
-        {
-            _container.Register(new CounterModel());
-        }
-
-        public static T Get<T>() where T : class
-        {
-            MakeSureContainer();
-            return _container.Get<T>();
-        }
-        
     }
 }

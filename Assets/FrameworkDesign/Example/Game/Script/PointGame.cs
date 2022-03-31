@@ -1,27 +1,10 @@
 ﻿namespace FrameworkDesign.Example
 {
-    public class PointGame
+    public class PointGame : Architecture<PointGame>
     {
-        private static IOCContainer _container;
-
-        static void MakeSureContainer()
+        protected override void Init()
         {
-            if (_container == null)
-            {
-                _container = new IOCContainer();
-                Init();
-            }
-        }
-
-        private static void Init()
-        {
-            _container.Register(new GameModel());
-        }
-
-        public static T Get<T>() where T : class
-        {
-            MakeSureContainer();
-            return _container.Get<T>();
+            Register(new GameModel());
         }
     }
 }

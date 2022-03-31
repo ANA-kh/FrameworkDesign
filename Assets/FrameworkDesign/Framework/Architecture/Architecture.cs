@@ -16,11 +16,18 @@
         protected abstract void Init();
 
         private IOCContainer _container = new IOCContainer();
-        
-        public static T Get<T>()
+
+        public static T Get<T>() where T : class
         {
             MakeSureArchitecture();
             return _architecture._container.Get<T>();
+        }
+
+        public void Register<T>(T instance)
+        {
+            MakeSureArchitecture();
+            
+            _architecture._container.Register<T>(instance);
         }
     }
 }
