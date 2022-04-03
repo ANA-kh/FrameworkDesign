@@ -4,7 +4,7 @@
     {
         public void Execute()
         {
-            var gameModel = PointGame.Get<GameModel>();
+            var gameModel = PointGame.Get<IGameModel>();
             gameModel.KillCount.Value++;
 
             if (gameModel.KillCount.Value == 4)
