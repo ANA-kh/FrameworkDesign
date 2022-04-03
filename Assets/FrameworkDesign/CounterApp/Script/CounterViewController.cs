@@ -6,10 +6,10 @@ namespace CounterApp
 {
     public class CounterViewController : MonoBehaviour
     {
-        private CounterModel _counterModel;
+        private ICounterModel _counterModel;
         void Start()
         {
-            _counterModel = CounterApp.Get<CounterModel>();
+            _counterModel = CounterApp.Get<ICounterModel>();
             _counterModel.Count.OnValueChanged += OnCountChanged;
             OnCountChanged(_counterModel.Count.Value);
 
@@ -42,9 +42,16 @@ namespace CounterApp
 
     }
 
-    public class CounterModel
+    public interface ICounterModel
     {
-        public BindableProperty<int> Count = new BindableProperty<int>()
+        BindableProperty<int> Count { get; }
+    }
+
+    public class CounterModel : ICounterModel
+    {
+        
+
+        public BindableProperty<int> Count { get; } = new BindableProperty<int>()
         {
             Value = 0
         };
