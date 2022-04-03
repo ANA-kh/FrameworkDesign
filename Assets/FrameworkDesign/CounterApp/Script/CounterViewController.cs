@@ -1,4 +1,5 @@
 ﻿using FrameworkDesign;
+using FrameworkDesign.Example;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -42,18 +43,30 @@ namespace CounterApp
 
     }
 
-    public interface ICounterModel
+    public interface ICounterModel : IModel
     {
         BindableProperty<int> Count { get; }
     }
 
     public class CounterModel : ICounterModel
     {
-        
+        public void Init()
+        {
+            var storage = Architecture.GetUtility<IStorage>();//TODO 考虑使用接口注入
+            Count.Value = storage.LoadInt("COUNTER_COUNT", 0);
+
+            Count.OnValueChanged += count =>
+            {
+                storage.SaveInt("COUNTER_COUNT", count);
+            };
+        }
 
         public BindableProperty<int> Count { get; } = new BindableProperty<int>()
         {
             Value = 0
         };
+
+        public IArchitecture Architecture { get; set; }
+        
     }
 }

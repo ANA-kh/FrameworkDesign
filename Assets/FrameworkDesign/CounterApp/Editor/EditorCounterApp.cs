@@ -9,6 +9,11 @@ namespace CounterApp.Editor
         [MenuItem("EditorCounterApp/Open")]
         static void Open()
         {
+            CounterApp.OnRegisterPatch += app =>
+            {
+                app.RegisterUtility<IStorage>(new EditorPrefsStorage());
+            };
+            
             var window = GetWindow<EditorCounterApp>();
             window.position = new Rect(100,100,400,600);
             window.titleContent = new GUIContent(nameof(EditorCounterApp));
@@ -22,7 +27,7 @@ namespace CounterApp.Editor
                 new AddCountCommand().Execute();
             }
             
-            GUILayout.Label(CounterApp.Get<CounterModel>().Count.Value.ToString());
+            GUILayout.Label(CounterApp.Get<ICounterModel>().Count.Value.ToString());
 
             if (GUILayout.Button("-"))
             {

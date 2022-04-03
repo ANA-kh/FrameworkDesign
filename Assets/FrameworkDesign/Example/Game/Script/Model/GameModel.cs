@@ -1,4 +1,6 @@
-﻿namespace FrameworkDesign.Example
+﻿using CounterApp;
+
+namespace FrameworkDesign.Example
 {
     public interface IGameModel
     {
