@@ -1,8 +1,8 @@
 ﻿namespace FrameworkDesign.Example
 {
-    public class PassGameCommand : ICommand
+    public class PassGameCommand : AbstractCommand
     {
-        public void Execute()
+        protected override void OnExecute()
         {
             GamePassEvent.Trigger();
         }

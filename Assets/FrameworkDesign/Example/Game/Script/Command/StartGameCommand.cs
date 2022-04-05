@@ -1,8 +1,8 @@
 ﻿namespace FrameworkDesign.Example
 {
-    public class StartGameCommand : ICommand
+    public class StartGameCommand : AbstractCommand
     {
-        public void Execute()
+        protected override void OnExecute()
         {
             GameStartEvent.Trigger();
         }

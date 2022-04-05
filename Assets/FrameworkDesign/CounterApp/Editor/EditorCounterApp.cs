@@ -1,10 +1,11 @@
 ﻿using System;
+using FrameworkDesign;
 using UnityEditor;
 using UnityEngine;
 
 namespace CounterApp.Editor
 {
-    public class EditorCounterApp : EditorWindow
+    public class EditorCounterApp : EditorWindow,IController
     {
         [MenuItem("EditorCounterApp/Open")]
         static void Open()
@@ -24,15 +25,20 @@ namespace CounterApp.Editor
         {
             if (GUILayout.Button("+"))
             {
-                new AddCountCommand().Execute();
+                GetArchitecture().SendCommand<AddCountCommand>();
             }
             
             GUILayout.Label(CounterApp.Get<ICounterModel>().Count.Value.ToString());
 
             if (GUILayout.Button("-"))
             {
-                new SubCountCommand().Execute();
+                GetArchitecture().SendCommand<SubCountCommand>();
             }
+        }
+
+        public IArchitecture GetArchitecture()
+        {
+            return CounterApp.Instance;
         }
     }
 }

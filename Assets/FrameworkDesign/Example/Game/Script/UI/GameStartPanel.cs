@@ -5,21 +5,20 @@ using UnityEngine.UI;
 
 namespace FrameworkDesign.Example
 {
-    public class GameStartPanel : MonoBehaviour
+    public class GameStartPanel : MonoBehaviour,IController
     {
         void Start()
         {
             transform.Find("BtnStart").GetComponent<Button>().onClick.AddListener(() =>
             {
                 gameObject.SetActive(false);
-                new StartGameCommand().Execute();
+                GetArchitecture().SendCommand<StartGameCommand>();
             });
         }
 
-        // Update is called once per frame
-        void Update()
+        public IArchitecture GetArchitecture()
         {
-
+            return PointGame.Instance;
         }
     }
 }

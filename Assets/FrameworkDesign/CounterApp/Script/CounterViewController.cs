@@ -16,12 +16,12 @@ namespace CounterApp
 
             transform.Find("BtnAdd").GetComponent<Button>().onClick.AddListener(() =>
             {
-                new AddCountCommand().Execute();
+                GetArchitecture().SendCommand<AddCountCommand>();
             });
 
             transform.Find("BtnSub").GetComponent<Button>().onClick.AddListener(() =>
             {
-                new SubCountCommand().Execute();
+                GetArchitecture().SendCommand<SubCountCommand>();
             });
         }
 
@@ -39,7 +39,7 @@ namespace CounterApp
 
         public IArchitecture GetArchitecture()
         {
-            return CounterApp.instance;
+            return CounterApp.Instance;
         }
     }
 

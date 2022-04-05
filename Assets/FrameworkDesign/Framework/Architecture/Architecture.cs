@@ -12,11 +12,14 @@ namespace FrameworkDesign
         void RegisterModel<T>(T model) where T : IModel;
 
         //注册utility
-        void RegisterUtility<T>(T utility);
+        void RegisterUtility<T>(T utility)where T : IUtility;
 
         T GetModel<T>() where T : class, IModel;
         
-        T GetUtility<T>()where T : class;
+        T GetUtility<T>()where T : class, IUtility;
+
+        void SendCommand<T>() where T : ICommand, new();
+        void SendCommand<T>(T command) where T : ICommand;
     }
     public abstract class Architecture<T> : IArchitecture where T : Architecture<T> ,new()
     {
@@ -30,7 +33,7 @@ namespace FrameworkDesign
         
         private static T _architecture;
 
-        public static IArchitecture instance
+        public static IArchitecture Instance // TODO 考虑使用单例模板
         {
             get
             {
@@ -121,7 +124,7 @@ namespace FrameworkDesign
             }
         }
 
-        public void RegisterUtility<T>(T utility)
+        public void RegisterUtility<T>(T utility)where T : IUtility
         {
             _container.Register<T>(utility);
         }
@@ -131,9 +134,22 @@ namespace FrameworkDesign
             return _container.Get<T>();
         }
 
-        public T GetUtility<T>() where T : class
+        public T GetUtility<T>() where T : class, IUtility
         {
             return _container.Get<T>();
+        }
+
+        public void SendCommand<T>() where T : ICommand, new()
+        {
+            var command = new T();
+            command.SetArchitecture(this);
+            command.Execute();
+        }
+
+        public void SendCommand<T>(T command) where T : ICommand
+        {
+            command.SetArchitecture(this);
+            command.Execute();
         }
     }
 }
