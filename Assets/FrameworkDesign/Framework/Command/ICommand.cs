@@ -1,6 +1,6 @@
 ﻿namespace FrameworkDesign
 {
-    public interface ICommand :IBelongToArchitecture,ICanSetArchitecture
+    public interface ICommand :IBelongToArchitecture,ICanSetArchitecture,ICanGetModel, ICanGetSystem, ICanGetUtility
     {
         void Execute();
     }
@@ -8,12 +8,12 @@
     public abstract class AbstractCommand :ICommand
     {
         private IArchitecture _architecture;
-        public IArchitecture GetArchitecture()
+        IArchitecture IBelongToArchitecture.GetArchitecture()
         {
             return _architecture;
         }
 
-        public void SetArchitecture(IArchitecture architecture)
+        void ICanSetArchitecture.SetArchitecture(IArchitecture architecture)
         {
             _architecture = architecture;
         }

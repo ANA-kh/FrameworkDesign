@@ -12,7 +12,7 @@ namespace CounterApp
     {
         protected override void OnInit()
         {
-            var counterModel = GetArchitecture().GetModel<ICounterModel>();
+            var counterModel = this.GetModel<ICounterModel>();
 
             var previousCount = counterModel.Count.Value;
 
@@ -26,7 +26,7 @@ namespace CounterApp
                 {
                     Debug.Log("--20");
                 }
-
+                
                 previousCount = newCount;
             };
         }

@@ -8,6 +8,7 @@ namespace CounterApp
         {
             RegisterUtility<IStorage>(new PlayerPrefsStorage());
             RegisterModel<ICounterModel>(new CounterModel());
+            RegisterSystem<IAchievementSystem>(new AchievementSystem());
         }
     }
 }

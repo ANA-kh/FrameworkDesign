@@ -1,6 +1,6 @@
 ﻿namespace FrameworkDesign
 {
-    public interface ISystem : IBelongToArchitecture, ICanSetArchitecture
+    public interface ISystem : IBelongToArchitecture, ICanSetArchitecture, ICanGetModel, ICanGetUtility
     {
         void Init();
     }
@@ -8,12 +8,12 @@
     public abstract class AbstractSystem : ISystem
     {
         private IArchitecture _architecture;
-        public IArchitecture GetArchitecture()
+        IArchitecture IBelongToArchitecture.GetArchitecture()
         {
             return _architecture;
         }
 
-        public void SetArchitecture(IArchitecture architecture)
+        void ICanSetArchitecture.SetArchitecture(IArchitecture architecture)
         {
             _architecture = architecture;
         }

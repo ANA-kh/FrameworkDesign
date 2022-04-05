@@ -14,6 +14,7 @@ namespace FrameworkDesign
         //注册utility
         void RegisterUtility<T>(T utility)where T : IUtility;
 
+        T GetSystem<T>() where T : class, ISystem;
         T GetModel<T>() where T : class, IModel;
         
         T GetUtility<T>()where T : class, IUtility;
@@ -127,6 +128,11 @@ namespace FrameworkDesign
         public void RegisterUtility<T>(T utility)where T : IUtility
         {
             _container.Register<T>(utility);
+        }
+
+        public T GetSystem<T>() where T : class, ISystem
+        {
+            return _container.Get<T>();
         }
 
         public T GetModel<T>() where T : class, IModel

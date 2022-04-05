@@ -10,18 +10,18 @@ namespace CounterApp
         private ICounterModel _counterModel;
         void Start()
         {
-            _counterModel = GetArchitecture().GetModel<ICounterModel>();
+            _counterModel = this.GetModel<ICounterModel>();
             _counterModel.Count.OnValueChanged += OnCountChanged;
             OnCountChanged(_counterModel.Count.Value);
 
             transform.Find("BtnAdd").GetComponent<Button>().onClick.AddListener(() =>
             {
-                GetArchitecture().SendCommand<AddCountCommand>();
+                this.SendCommand<AddCountCommand>();
             });
 
             transform.Find("BtnSub").GetComponent<Button>().onClick.AddListener(() =>
             {
-                GetArchitecture().SendCommand<SubCountCommand>();
+                this.SendCommand<SubCountCommand>();
             });
         }
 
@@ -37,7 +37,7 @@ namespace CounterApp
             transform.Find("CountText").GetComponent<Text>().text = newCount.ToString();
         }
 
-        public IArchitecture GetArchitecture()
+        IArchitecture IBelongToArchitecture.GetArchitecture()
         {
             return CounterApp.Instance;
         }
@@ -57,7 +57,7 @@ namespace CounterApp
     {
         protected override void OnInit()
         {
-            var storage = GetArchitecture().GetUtility<IStorage>();//TODO 考虑使用接口注入
+            var storage = this.GetUtility<IStorage>();//TODO 考虑使用接口注入
             Count.Value = storage.LoadInt("COUNTER_COUNT", 0);
 
             Count.OnValueChanged += count =>
