@@ -30,6 +30,19 @@ namespace FrameworkDesign
         
         private static T _architecture;
 
+        public static IArchitecture instance
+        {
+            get
+            {
+                if (_architecture == null)
+                {
+                    MakeSureArchitecture();
+                }
+
+                return _architecture;
+            }
+        }
+
         static void MakeSureArchitecture()
         {
             if (_architecture == null)
@@ -80,7 +93,7 @@ namespace FrameworkDesign
 
         public void RegisterSystem<T>(T system) where T : ISystem
         {
-            system.Architecture = this;
+            system.SetArchitecture(this);
             _container.Register<T>(system);
 
             if (!_inited)
@@ -95,7 +108,7 @@ namespace FrameworkDesign
 
         public void RegisterModel<T>(T model) where T : IModel
         {
-            model.Architecture = this;
+            model.SetArchitecture(this);
             _container.Register<T>(model);
 
             if (!_inited)
