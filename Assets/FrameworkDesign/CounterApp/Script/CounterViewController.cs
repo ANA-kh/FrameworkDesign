@@ -42,11 +42,7 @@ namespace CounterApp
             return CounterApp.Instance;
         }
     }
-
-    public class OnCountChangedEvent : Event<OnCountChangedEvent>
-    {
-
-    }
+    
 
     public interface ICounterModel : IModel
     {

@@ -4,7 +4,7 @@
     {
         protected override void OnExecute()
         {
-            GamePassEvent.Trigger();
+            this.SendEvent<GamePassEvent>();
         }
     }
 }

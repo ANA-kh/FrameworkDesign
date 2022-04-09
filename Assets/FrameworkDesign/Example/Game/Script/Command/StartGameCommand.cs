@@ -4,7 +4,7 @@
     {
         protected override void OnExecute()
         {
-            GameStartEvent.Trigger();
+            this.SendEvent<GameStartEvent>();
         }
     }
 }

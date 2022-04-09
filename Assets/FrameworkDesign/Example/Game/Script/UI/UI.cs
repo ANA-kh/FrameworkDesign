@@ -3,21 +3,26 @@ using UnityEngine;
 
 namespace FrameworkDesign.Example
 {
-    public class UI : MonoBehaviour
+    public class UI : MonoBehaviour,IController
     {
         private void Awake()
         {
-            GamePassEvent.Register(OnGameEnd);
+            this.RegisterEvent<GamePassEvent>(OnGameEnd);
         }
 
-        private void OnGameEnd()
+        private void OnGameEnd(GamePassEvent e)
         {
             transform.Find("Canvas/GameStopPanel").gameObject.SetActive(true);
         }
 
         private void OnDestroy()
         {
-            GamePassEvent.UnRegister(OnGameEnd);
+            this.UnRegisterEvent<GamePassEvent>(OnGameEnd);
+        }
+
+        IArchitecture IBelongToArchitecture.GetArchitecture()
+        {
+            return PointGame.Instance;
         }
     }
 }

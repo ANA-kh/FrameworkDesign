@@ -9,7 +9,7 @@
 
             if (gameModel.KillCount.Value == 4)
             {
-                GamePassEvent.Trigger();
+                this.SendEvent<GamePassEvent>();
             }
         }
     }

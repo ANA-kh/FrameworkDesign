@@ -4,7 +4,11 @@
     {
         protected override void Init()
         {
-            Register<IGameModel>(new GameModel());
+            RegisterSystem<IScoreSystem>(new ScoreSystem());
+            
+            RegisterModel<IGameModel>(new GameModel());
+            
+            RegisterUtility<IStorage>(new PlayerPrefsStorage());
         }
     }
 }

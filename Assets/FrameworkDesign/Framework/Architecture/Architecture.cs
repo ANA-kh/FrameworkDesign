@@ -21,6 +21,12 @@ namespace FrameworkDesign
 
         void SendCommand<T>() where T : ICommand, new();
         void SendCommand<T>(T command) where T : ICommand;
+
+        void SendEvent<T>() where T : new();
+        void SendEvent<T>(T e);
+
+        IUnRegister RegisterEvent<T>(Action<T> onEvent);
+        void UnRegisterEvent<T>(Action<T> onEvent);
     }
     public abstract class Architecture<T> : IArchitecture where T : Architecture<T> ,new()
     {
@@ -156,6 +162,27 @@ namespace FrameworkDesign
         {
             command.SetArchitecture(this);
             command.Execute();
+        }
+
+        private ITypeEventSystem _typeEventSystem = new TypeEventSystem();
+        public void SendEvent<T>() where T : new()
+        {
+            _typeEventSystem.Send<T>();
+        }
+
+        public void SendEvent<T>(T e)
+        {
+            _typeEventSystem.Send<T>(e);
+        }
+
+        public IUnRegister RegisterEvent<T>(Action<T> onEvent)
+        {
+            return _typeEventSystem.Register<T>(onEvent);
+        }
+
+        public void UnRegisterEvent<T>(Action<T> onEvent)
+        {
+            _typeEventSystem.UnRegister<T>(onEvent);
         }
     }
 }

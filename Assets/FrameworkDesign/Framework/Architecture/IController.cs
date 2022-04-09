@@ -1,6 +1,6 @@
 ﻿namespace FrameworkDesign
 {
-    public interface IController : IBelongToArchitecture,ICanSendCommand,ICanGetModel,ICanGetSystem
+    public interface IController : IBelongToArchitecture,ICanSendCommand,ICanGetModel,ICanGetSystem,ICanRegisterEvent
     {
         
     }

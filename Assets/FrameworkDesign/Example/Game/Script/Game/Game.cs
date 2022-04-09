@@ -3,22 +3,27 @@ using UnityEngine;
 
 namespace FrameworkDesign.Example
 {
-    public class Game : MonoBehaviour
+    public class Game : MonoBehaviour,IController
     {
         private void Awake()
         {
-            GameStartEvent.Register(OnGameStart);
+            this.RegisterEvent<GameStartEvent>(OnGameStart);
         }
 
 
-        private void OnGameStart()
+        private void OnGameStart(GameStartEvent e)
         {
             transform.Find("Enemies").gameObject.SetActive(true);
         }
 
         private void OnDestroy()
         {
-            GameStartEvent.UnRegister(OnGameStart);
+            this.UnRegisterEvent<GameStartEvent>(OnGameStart);
+        }
+
+        IArchitecture IBelongToArchitecture.GetArchitecture()
+        {
+            return PointGame.Instance;
         }
     }
 }
