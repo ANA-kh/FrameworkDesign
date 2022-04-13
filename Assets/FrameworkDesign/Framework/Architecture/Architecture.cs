@@ -85,22 +85,6 @@ namespace FrameworkDesign
 
         private IOCContainer _container = new IOCContainer();
 
-        //获取模块
-        public static T Get<T>() where T : class
-        {
-            MakeSureArchitecture();
-            return _architecture._container.Get<T>();
-        }
-
-        //注册模块
-        //TODO 内部用RegisterUtility，外部用Register。  相同功能，易混淆不太好
-        public static void Register<T>(T instance)
-        {
-            MakeSureArchitecture();
-            
-            _architecture._container.Register<T>(instance);
-        }
-
         public void RegisterSystem<T>(T system) where T : ISystem
         {
             system.SetArchitecture(this);

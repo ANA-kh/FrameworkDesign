@@ -15,8 +15,6 @@ namespace FrameworkDesign.Example
             
             this.RegisterEvent<GamePassEvent>(e =>
             {
-                gameModel.Score.Value = Random.Range(1, 50);
-                
                 Debug.Log("Score:"  + gameModel.Score.Value);
                 Debug.Log("BestScore:" + gameModel.BestScore.Value);
 
@@ -26,6 +24,19 @@ namespace FrameworkDesign.Example
                     gameModel.BestScore.Value = gameModel.Score.Value;
                     Debug.Log("新记录");
                 }
+            });
+
+
+            this.RegisterEvent<OnEnemyKillEvent>(e =>
+            {
+                gameModel.Score.Value += 10;
+                Debug.Log("CurScore" + gameModel.Score.Value);
+            });
+
+            this.RegisterEvent<OnMissEvent>(e =>
+            {
+                gameModel.Score.Value -= 5;
+                Debug.Log("CurScore" + gameModel.Score.Value);
             });
         }
     }

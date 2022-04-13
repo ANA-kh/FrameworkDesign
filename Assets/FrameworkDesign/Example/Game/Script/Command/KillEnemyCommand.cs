@@ -7,6 +7,8 @@
             var gameModel = this.GetModel<IGameModel>();
             gameModel.KillCount.Value++;
 
+            this.SendEvent<OnEnemyKillEvent>();
+
             if (gameModel.KillCount.Value == 4)
             {
                 this.SendEvent<GamePassEvent>();
