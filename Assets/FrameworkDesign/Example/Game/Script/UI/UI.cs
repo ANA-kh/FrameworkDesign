@@ -5,24 +5,31 @@ namespace FrameworkDesign.Example
 {
     public class UI : MonoBehaviour,IController
     {
-        private void Awake()
+        void Start()
         {
-            this.RegisterEvent<GamePassEvent>(OnGameEnd);
+            this.RegisterEvent<GamePassEvent>(OnGamePass);
+            this.RegisterEvent<OnCountDownEndEvent>(e =>
+            {
+                transform.Find("Canvas/GamePanel").gameObject.SetActive(false);
+                transform.Find("Canvas/GameOverPanel").gameObject.SetActive(true);
+            }).UnRegisterWhenGameObjectDestroyed(gameObject);
         }
 
-        private void OnGameEnd(GamePassEvent e)
+        private void OnGamePass(GamePassEvent e)
         {
-            transform.Find("Canvas/GameStopPanel").gameObject.SetActive(true);
+            transform.Find("Canvas/GamePanel").gameObject.SetActive(false);
+            transform.Find("Canvas/GamePassPanel").gameObject.SetActive(true);
         }
-
+        
         private void OnDestroy()
         {
-            this.UnRegisterEvent<GamePassEvent>(OnGameEnd);
+            this.UnRegisterEvent<GamePassEvent>(OnGamePass);
         }
 
-        IArchitecture IBelongToArchitecture.GetArchitecture()
+        public IArchitecture GetArchitecture()
         {
             return PointGame.Instance;
         }
+
     }
 }

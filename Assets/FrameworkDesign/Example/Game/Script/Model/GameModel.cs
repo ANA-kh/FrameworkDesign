@@ -8,6 +8,7 @@ namespace FrameworkDesign.Example
         BindableProperty<int> Gold { get; }
         BindableProperty<int> Score { get; }
         BindableProperty<int> BestScore { get; }
+        BindableProperty<int> Life { get; }
     }
     
     public class GameModel :AbstractModel, IGameModel
@@ -29,16 +30,23 @@ namespace FrameworkDesign.Example
             Value = 0
         };
 
+        public BindableProperty<int> Life { get; } = new BindableProperty<int>()
+        {
+            Value = 0
+        };
+
         protected override void OnInit()
         {
             var storage = this.GetUtility<IStorage>();
             
             BestScore.Value = storage.LoadInt(nameof(BestScore),0);
-            
-            BestScore.OnValueChanged += v =>
-            {
-                storage.SaveInt(nameof(BestScore),v);
-            };
+            BestScore.RegisterOnValueChanged(v => { storage.SaveInt(nameof(BestScore),v); });
+
+            Life.Value = storage.LoadInt(nameof(Life), 3);
+            Life.RegisterOnValueChanged(v => storage.SaveInt(nameof(Life), v));
+
+            Gold.Value = storage.LoadInt(nameof(Gold), 0);
+            Gold.RegisterOnValueChanged(v => storage.SaveInt(nameof(Gold), v));
         }
     }
 }

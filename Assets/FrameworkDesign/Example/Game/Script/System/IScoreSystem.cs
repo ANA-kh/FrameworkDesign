@@ -15,9 +15,11 @@ namespace FrameworkDesign.Example
             
             this.RegisterEvent<GamePassEvent>(e =>
             {
-                Debug.Log("Score:"  + gameModel.Score.Value);
-                Debug.Log("BestScore:" + gameModel.BestScore.Value);
+                var countDownSystem = this.GetSystem<ICountDownSystem>();
 
+                var timeScore = countDownSystem.CurrentRemainSeconds * 10;
+
+                gameModel.Score.Value += timeScore;
 
                 if (gameModel.Score.Value > gameModel.BestScore.Value)
                 {

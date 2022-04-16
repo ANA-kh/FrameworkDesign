@@ -115,6 +115,7 @@ namespace FrameworkDesign
             
             return new TypeEventSystemUnRegister<T>()
             {
+                TypeEventSystem = this,
                 OnEvent = onEvent
             };
         }
