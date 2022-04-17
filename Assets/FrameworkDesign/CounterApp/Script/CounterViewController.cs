@@ -28,7 +28,7 @@ namespace CounterApp
 
         private void OnDestroy()
         {
-            _counterModel.Count.RegisterOnValueChanged(OnCountChanged);
+            _counterModel.Count.UnRegisterOnValueChanged(OnCountChanged);
             _counterModel = null;
         }
 

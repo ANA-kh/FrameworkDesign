@@ -34,7 +34,11 @@ namespace FrameworkDesign.Example
 
             transform.Find("BestScoreText").GetComponent<Text>().text = "最高分:" + _gameModel.BestScore.Value;
         }
-        
+
+        private void OnEnable()
+        {
+            transform.Find("BestScoreText").GetComponent<Text>().text = "最高分:" + _gameModel.BestScore.Value;
+        }
 
         private void OnLifeValueChanged(int life)
         {
