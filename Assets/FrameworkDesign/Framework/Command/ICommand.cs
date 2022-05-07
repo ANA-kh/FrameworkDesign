@@ -1,7 +1,7 @@
 ﻿namespace FrameworkDesign
 {
     public interface ICommand :IBelongToArchitecture,ICanSetArchitecture,ICanGetModel, 
-        ICanGetSystem, ICanGetUtility,ICanSendEvent,ICanSendCommand
+        ICanGetSystem, ICanGetUtility,ICanSendEvent,ICanSendCommand,ICanSendQuery
     {
         void Execute();
     }

@@ -25,8 +25,8 @@ namespace FrameworkDesign.Example
 
             _gameModel = this.GetModel<IGameModel>();
 
-            _gameModel.Gold.RegisterOnValueChanged(OnGoldValueChanged);
-            _gameModel.Life.RegisterOnValueChanged(OnLifeValueChanged);
+            _gameModel.Gold.Register(OnGoldValueChanged);
+            _gameModel.Life.Register(OnLifeValueChanged);
 
             // 第一次需要调用一下
             OnGoldValueChanged(_gameModel.Gold.Value);
@@ -62,8 +62,8 @@ namespace FrameworkDesign.Example
 
         private void OnDestroy()
         {
-            _gameModel.Gold.UnRegisterOnValueChanged(OnGoldValueChanged);
-            _gameModel.Life.UnRegisterOnValueChanged(OnLifeValueChanged);
+            _gameModel.Gold.UnRegister(OnGoldValueChanged);
+            _gameModel.Life.UnRegister(OnLifeValueChanged);
             _gameModel = null;
         }
 

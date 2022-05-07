@@ -2,27 +2,32 @@
 
 namespace FrameworkDesign
 {
-    public class BindableProperty<T> where T : IEquatable<T>
+    public class BindableProperty<T>
     {
-        private T value = default(T);
+        public BindableProperty(T defaultValue = default)
+        {
+            _value = defaultValue;
+        }
+        
+        private T _value = default(T);
         //public Action<T> OnValueChanged;
 
         public T Value
         {
-            get => value;
+            get => _value;
             set
             {
-                if (!value.Equals(this.value))
-                {
-                    this.value = value;
-                    _onValueChanged?.Invoke(value);
-                }
+                if(value == null && _value == null)return;
+                if(value!=null && value.Equals(_value))return;
+                
+                _value = value;
+                _onValueChanged?.Invoke(value);
             }
         }
 
         private Action<T> _onValueChanged = v => { };
 
-        public IUnRegister RegisterOnValueChanged(Action<T> onValueChanged)
+        public IUnRegister Register(Action<T> onValueChanged)
         {
             _onValueChanged += onValueChanged;
             return new BindablePropertyUnRegister<T>()
@@ -31,14 +36,25 @@ namespace FrameworkDesign
                 OnValueChanged = onValueChanged,
             };
         }
+
+        public IUnRegister RegisterWithInitValue(Action<T> onValueChanged)
+        {
+            onValueChanged(_value);
+            return Register(onValueChanged);
+        }
         
-        public void UnRegisterOnValueChanged(Action<T> onValueChanged)
+        public void UnRegister(Action<T> onValueChanged)
         {
             _onValueChanged -= onValueChanged;
         }
+
+        public static implicit operator T(BindableProperty<T> property)
+        {
+            return property.Value;
+        }
     }
 
-    public class BindablePropertyUnRegister<T> : IUnRegister where T : IEquatable<T>
+    public class BindablePropertyUnRegister<T> : IUnRegister
     {
         public BindableProperty<T> BindableProperty { get; set; }
 
@@ -46,7 +62,7 @@ namespace FrameworkDesign
 
         public void UnRegister()
         {
-            BindableProperty.UnRegisterOnValueChanged(OnValueChanged);
+            BindableProperty.UnRegister(OnValueChanged);
 
             BindableProperty = null;
             OnValueChanged = null;

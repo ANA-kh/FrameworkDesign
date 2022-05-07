@@ -22,6 +22,8 @@ namespace FrameworkDesign
         void SendCommand<T>() where T : ICommand, new();
         void SendCommand<T>(T command) where T : ICommand;
 
+        TResult SendQuery<TResult>(IQuery<TResult> query);
+
         void SendEvent<T>() where T : new();
         void SendEvent<T>(T e);
 
@@ -146,6 +148,12 @@ namespace FrameworkDesign
         {
             command.SetArchitecture(this);
             command.Execute();
+        }
+
+        public TResult SendQuery<TResult>(IQuery<TResult> query)
+        {
+            query.SetArchitecture(this);
+            return query.Do();
         }
 
         private ITypeEventSystem _typeEventSystem = new TypeEventSystem();

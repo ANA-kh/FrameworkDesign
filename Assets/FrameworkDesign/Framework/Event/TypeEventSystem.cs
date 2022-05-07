@@ -73,11 +73,12 @@ namespace FrameworkDesign
         public class Registrations<T> :IRegistrations
         {
             public Action<T> OnEvent = e => { };
-
         }
         
-        //TODO 将Action的参数T（即注册的函数执行时的参数）的类型作为索引是否有问题？？？  
+        
         private Dictionary<Type,IRegistrations> _eventRegistration = new Dictionary<Type, IRegistrations>();
+        
+        public static readonly TypeEventSystem Global = new TypeEventSystem();
 
         public void Send<T>() where T : new()
         {
@@ -128,6 +129,24 @@ namespace FrameworkDesign
             {
                 (registrations as Registrations<T>).OnEvent -= onEvent;
             }
+        }
+    }
+
+    public interface IOnEvent<T>
+    {
+        void OnEvent(T e);
+    }
+
+    public static class OnGlobalEventExtension
+    {
+        public static IUnRegister RegisterEvent<T>(this IOnEvent<T> self) where T : struct
+        {
+            return TypeEventSystem.Global.Register<T>(self.OnEvent);
+        }
+
+        public static void UnRegisterEvent<T>(this IOnEvent<T> self) where T : struct
+        {
+            TypeEventSystem.Global.UnRegister<T>(self.OnEvent);
         }
     }
 }

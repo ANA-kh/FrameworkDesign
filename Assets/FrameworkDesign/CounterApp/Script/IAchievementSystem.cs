@@ -16,7 +16,7 @@ namespace CounterApp
 
             var previousCount = counterModel.Count.Value;
 
-            counterModel.Count.RegisterOnValueChanged( newCount =>
+            counterModel.Count.Register( newCount =>
             {
                 if (previousCount < 10 && newCount >= 10)
                 {
